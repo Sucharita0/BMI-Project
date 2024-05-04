@@ -25,18 +25,20 @@ import "./bmi-report.css";
 
             }else{
                
-                 let bmi = (weight / (height * height) * 703);
+                 let bmi = weight /((height/100) * height/100)
                 
                 setBmi(bmi.toFixed(1))
 
-                if(bmi<25){
+                if(bmi<18.5){
                     setMessage('you are underweight')
 
-                }else if (bmi>=25 && bmi<=30){
+                }else if (bmi>=18 && bmi<=24.9){
                     setMessage('you are healthy weight')
                 }else{
                     setMessage('you are over weight')
                 }
+
+                
             }
         }
             
